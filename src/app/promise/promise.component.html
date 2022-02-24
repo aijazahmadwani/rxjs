@@ -1,0 +1,29 @@
+<div class="py-3">
+    <h2>Promise</h2>
+    <h3>Difference between Promise and Observable</h3>
+
+    <div class="row">
+        <div class="col-6">
+            <h4>Promise</h4>
+            
+            <pre>
+            1. asyn 
+            2. Returns single value 
+                    resolved or rejected
+            3. Promise can't be cancelled
+            4. Promises are executed eagerly.  Eagar: The Promise callback will execute right away at the constructor level.
+            </pre>
+        </div>
+        <div class="col-6">
+            <h4>Observable</h4>
+            <pre>
+            1. asyn / sync
+            2. Returns stream of values
+            3. observable  can be cancelled
+            4. Observables are executed lazily. Lazy: The Producer function will only trigger after there is a subscription created for that Observable. Otherwise, it will stay idle.
+            </pre>
+        </div>
+    </div>
+
+    <h1>{{promiseVal}}</h1>
+</div>
