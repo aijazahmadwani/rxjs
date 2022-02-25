@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AllComponent } from './observable/all/all.component';
 import { FromEventComponent } from './observable/from-event/from-event.component';
+import { IntervalComponent } from './observable/interval/interval.component';
 import { ObservableComponent } from './observable/observable.component';
 import { PromiseComponent } from './promise/promise.component';
 
@@ -13,6 +14,7 @@ const routes: Routes = [
     children: [
       { path: '', component: AllComponent },
       { path: 'from-event', component: FromEventComponent },
+      { path: 'interval', component: IntervalComponent },
     ],
   },
   { path: '**', redirectTo: 'promise' },
