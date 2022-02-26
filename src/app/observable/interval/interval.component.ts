@@ -1,6 +1,6 @@
 import { DesignUtilityService } from './../../appServices/design-utility.service';
 import { Component, OnInit } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { interval, Subscription, timer } from 'rxjs';
 
 @Component({
   selector: 'app-interval',
@@ -13,7 +13,11 @@ export class IntervalComponent implements OnInit {
   constructor(private _designUtility:DesignUtilityService) { }
 
   ngOnInit(): void {
-    const broadCastVideos = interval(1000);
+
+
+    // const broadCastVideos = interval(1000);
+    //timer(delay,interval)
+    const broadCastVideos = timer(5000,1000);
     this.videoSubscription = broadCastVideos.subscribe(res=>{
       console.log(res);
       this.obsMesg = 'Video '+res;
