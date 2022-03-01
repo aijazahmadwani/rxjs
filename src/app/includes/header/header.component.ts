@@ -1,3 +1,4 @@
+import { DesignUtilityService } from './../../appServices/design-utility.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+exclusive:boolean=false;
+  constructor(private _designUtility:DesignUtilityService) { }
 
   ngOnInit(): void {
+    this._designUtility.exclusive.subscribe(res=>{
+      this.exclusive = res;
+    })
   }
 
 }

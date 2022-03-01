@@ -1,3 +1,4 @@
+import { SubjectComponent } from './observable/subject/subject.component';
 import { ToArrayComponent } from './observable/to-array/to-array.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'of-from', component: OfFromComponent },
       { path: 'toArray', component: ToArrayComponent },
       { path: 'map', component: MapComponent },
+      { path: 'subject', component: SubjectComponent },
     ],
   },
   { path: '**', redirectTo: 'promise' },
