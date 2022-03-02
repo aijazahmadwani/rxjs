@@ -1,1 +1,7 @@
 <h2>Comp1</h2>
+<hr>
+
+<p>User is <span class="text-primary">{{username}}</span></p>
+<input type="text" class="form-control" #uname>
+<br>
+<button class="btn btn-primary" (click)="onChange(uname.value)">Change</button>
